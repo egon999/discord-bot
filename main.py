@@ -3,9 +3,7 @@ import discord
 import requests
 import os
 
-DISCORD_TOKEN = os.getenv("DISCORD_TOKEN
-")
-
+DISCORD_TOKEN = os.getenv("DISCORD_TOKEN")
 intents = discord.Intents.default()
 intents.message_content = True
 client = discord.Client(intents=intents)
