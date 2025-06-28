@@ -3,7 +3,7 @@ import discord
 import requests
 import os
 
-DISCORD_TOKEN = os.getenv("MTM4Nzc0ODc1MDI0NzcyMzEyMg.Gk8wQ4.Efys8pQP0zb3v0zZnqs48-5dAIwkr784ic93q0
+DISCORD_TOKEN = os.getenv("DISCORD_TOKEN
 ")
 
 intents = discord.Intents.default()
