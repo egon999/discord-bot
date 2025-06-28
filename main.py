@@ -32,7 +32,7 @@ async def on_message(message):
                 await message.channel.send("❗ **Region must be** `bd` **or** `ind` **only.**")
                 return
 
-            wait_msg = await message.channel.send("⏳ **Sending Likes, Please Wait...**")
+            wait_msg = await message.channel.send("⏳ **Sending Likes, Please Wait a mooment...**")
 
             url = f"https://anish-likes.vercel.app/like?server_name={region}&uid={uid}&key=jex4rrr"
             response = requests.get(url)
@@ -45,12 +45,12 @@ async def on_message(message):
 
             if data.get("status") == 2:
                 embed = discord.Embed(
-                    title="🚫 Max Likes Reached for Today",
+                    title="🚫 Max Likes Reached for Today, Cooling Down 24Hrs...",
                     description=(
-                        f"**👤 Name:** {data.get('PlayerNickname', 'N/A')}\n"
+                        f"**👤 Account Name:** {data.get('PlayerNickname', 'N/A')}\n"
                         f"**🆔 UID:** {uid}\n"
                         f"**🌍 Region:** {region.upper()}\n"
-                        f"**❤️ Current Likes:** {data.get('LikesNow', 'N/A')}"
+                        f"**🔸 Current Likes:** {data.get('LikesNow', 'N/A')}"
                     ),
                     color=discord.Color.red()
                 )
@@ -64,12 +64,12 @@ async def on_message(message):
             embed = discord.Embed(
                 title="✅ Likes Sent Successfully!",
                 description=(
-                    f"**👤 Name:** {data.get('PlayerNickname', 'N/A')}\n"
+                    f"**👤 Account Name:** {data.get('PlayerNickname', 'N/A')}\n"
                     f"**🆔 UID:** {uid}\n"
                     f"**🌍 Server:** {region.upper()}\n"
-                    f"**❤️ Before:** {data.get('LikesbeforeCommand', 'N/A')}\n"
-                    f"**👍 After:** {data.get('LikesafterCommand', 'N/A')}\n"
-                    f"**🎯 Sent By:** ZestyBrats"
+                    f"**🔵 Before:** {data.get('LikesbeforeCommand', 'N/A')}\n"
+                    f"**🔴 After:** {data.get('LikesafterCommand', 'N/A')}\n"
+                    f"**🔹 Sent By:** .gg/ZestyBrats"
                 ),
                 color=discord.Color.green()
             )
