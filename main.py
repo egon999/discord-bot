@@ -32,7 +32,7 @@ async def on_message(message):
                 await message.channel.send("❗ **Region must be** `bd` **or** `ind` **only.**")
                 return
 
-            wait_msg = await message.channel.send("⏳ **Sending Likes, Please Wait a mooment...**")
+            wait_msg = await message.channel.send("⏳ **Sending Likes, Please Wait a moment...**")
 
             url = f"https://anish-likes.vercel.app/like?server_name={region}&uid={uid}&key=jex4rrr"
             response = requests.get(url)
